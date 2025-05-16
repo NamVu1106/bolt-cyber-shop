@@ -93,8 +93,18 @@ const Products = () => {
               <div className="mb-8">
                 <h4 className="font-medium text-white mb-4">Khoảng giá</h4>
                 <div className="mb-2 flex justify-between text-sm">
-                  <span>${priceRange[0]}</span>
-                  <span>${priceRange[1]}</span>
+                  <span>{new Intl.NumberFormat('vi-VN', {
+                    style: 'currency', 
+                    currency: 'VND',
+                    minimumFractionDigits: 0,
+                    maximumFractionDigits: 0
+                  }).format(priceRange[0] * 23000)}</span>
+                  <span>{new Intl.NumberFormat('vi-VN', {
+                    style: 'currency', 
+                    currency: 'VND',
+                    minimumFractionDigits: 0,
+                    maximumFractionDigits: 0
+                  }).format(priceRange[1] * 23000)}</span>
                 </div>
                 <input
                   type="range"

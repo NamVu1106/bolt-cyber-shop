@@ -19,7 +19,7 @@ const Index = () => {
       <div className="relative h-[500px] overflow-hidden">
         <img 
           src={banners[0].image} 
-          alt="Gaming Peripherals" 
+          alt="Phụ kiện Gaming" 
           className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent flex items-center">
@@ -98,7 +98,7 @@ const Index = () => {
           <div className="relative overflow-hidden rounded-lg">
             <img 
               src={banners[1].image} 
-              alt="Gaming Headsets" 
+              alt="Tai nghe Gaming" 
               className="w-full h-64 md:h-80 object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent flex items-center">

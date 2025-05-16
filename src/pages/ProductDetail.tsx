@@ -198,7 +198,21 @@ const ProductDetail = () => {
                     <span className="text-tech-text">Danh mục</span>
                   </div>
                   <div className="w-2/3 p-4">
-                    <span className="capitalize">{product.category}</span>
+                    <span className="capitalize">
+                      {(() => {
+                        const categoryMap: { [key: string]: string } = {
+                          'mouse': 'Chuột',
+                          'keyboard': 'Bàn phím',
+                          'headset': 'Tai nghe',
+                          'usb-hub': 'Bộ chia USB',
+                          'monitor': 'Màn hình',
+                          'accessories': 'Phụ kiện',
+                          'webcam': 'Webcam',
+                          'furniture': 'Nội thất gaming'
+                        };
+                        return categoryMap[product.category] || product.category;
+                      })()}
+                    </span>
                   </div>
                 </div>
                 <div className="flex border-b border-tech-border">

@@ -35,12 +35,12 @@ const Auth = () => {
               {/* Header */}
               <div className="mb-8 text-center">
                 <h2 className="text-3xl font-mono font-bold text-white">
-                  {isLogin ? 'Sign In' : 'Create Account'}
+                  {isLogin ? 'Đăng nhập' : 'Tạo tài khoản'}
                 </h2>
                 <p className="text-tech-text mt-2">
                   {isLogin 
-                    ? 'Access your TechX account' 
-                    : 'Join the TechX community'}
+                    ? 'Truy cập vào tài khoản TechX của bạn' 
+                    : 'Tham gia cộng đồng TechX'}
                 </p>
               </div>
               
@@ -49,7 +49,7 @@ const Auth = () => {
                 {!isLogin && (
                   <div>
                     <label htmlFor="username" className="block text-sm font-medium text-tech-text mb-1">
-                      Username
+                      Tên người dùng
                     </label>
                     <input
                       id="username"
@@ -59,14 +59,14 @@ const Auth = () => {
                       value={username}
                       onChange={(e) => setUsername(e.target.value)}
                       className="tech-input w-full"
-                      placeholder="Enter your username"
+                      placeholder="Nhập tên người dùng"
                     />
                   </div>
                 )}
                 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-tech-text mb-1">
-                    Email address
+                    Email
                   </label>
                   <input
                     id="email"
@@ -77,13 +77,13 @@ const Auth = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="tech-input w-full"
-                    placeholder="Enter your email"
+                    placeholder="Nhập email của bạn"
                   />
                 </div>
                 
                 <div>
                   <label htmlFor="password" className="block text-sm font-medium text-tech-text mb-1">
-                    Password
+                    Mật khẩu
                   </label>
                   <input
                     id="password"
@@ -94,14 +94,14 @@ const Auth = () => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     className="tech-input w-full"
-                    placeholder="Enter your password"
+                    placeholder="Nhập mật khẩu của bạn"
                   />
                 </div>
                 
                 {isLogin && (
                   <div className="text-right">
                     <Link to="/forgot-password" className="text-sm text-tech-accent-blue hover:text-tech-accent-orange transition-colors">
-                      Forgot password?
+                      Quên mật khẩu?
                     </Link>
                   </div>
                 )}
@@ -111,7 +111,7 @@ const Auth = () => {
                     type="submit"
                     className="w-full bg-gradient-to-r from-tech-accent-blue to-tech-accent-purple text-black py-3 rounded-md font-mono font-bold hover:opacity-90 transition-colors"
                   >
-                    {isLogin ? 'Sign In' : 'Create Account'}
+                    {isLogin ? 'Đăng nhập' : 'Đăng ký'}
                   </button>
                 </div>
               </form>
@@ -119,12 +119,12 @@ const Auth = () => {
               {/* Toggle between login and register */}
               <div className="mt-6 text-center">
                 <p className="text-sm text-tech-text">
-                  {isLogin ? "Don't have an account? " : "Already have an account? "}
+                  {isLogin ? "Chưa có tài khoản? " : "Đã có tài khoản? "}
                   <button
                     onClick={() => setIsLogin(!isLogin)}
                     className="text-tech-accent-blue font-semibold hover:text-tech-accent-orange transition-colors"
                   >
-                    {isLogin ? 'Sign Up' : 'Sign In'}
+                    {isLogin ? 'Đăng ký' : 'Đăng nhập'}
                   </button>
                 </p>
               </div>
@@ -132,7 +132,7 @@ const Auth = () => {
               {/* Social login options */}
               <div className="mt-8 border-t border-tech-border pt-6">
                 <div className="text-sm text-center text-tech-text mb-4">
-                  Or continue with
+                  Hoặc tiếp tục với
                 </div>
                 <div className="grid grid-cols-3 gap-3">
                   <button className="py-2 px-4 bg-tech-secondary rounded-md hover:bg-tech-border transition-colors">

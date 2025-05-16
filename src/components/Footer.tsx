@@ -15,32 +15,32 @@ const Footer = () => {
               <span className="text-white font-mono font-bold text-xl">TechX</span>
             </div>
             <p className="text-tech-text text-sm">
-              Your one-stop shop for premium computer peripherals and accessories.
+              Cửa hàng phụ kiện máy tính và thiết bị ngoại vi cao cấp.
             </p>
           </div>
           
           <div>
-            <h4 className="font-mono font-bold text-white mb-4">Shop</h4>
+            <h4 className="font-mono font-bold text-white mb-4">Mua sắm</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/products" className="text-tech-text hover:text-tech-accent-blue transition-colors">All Products</Link></li>
-              <li><Link to="/products?category=mouse" className="text-tech-text hover:text-tech-accent-blue transition-colors">Mice</Link></li>
-              <li><Link to="/products?category=keyboard" className="text-tech-text hover:text-tech-accent-blue transition-colors">Keyboards</Link></li>
-              <li><Link to="/products?category=headset" className="text-tech-text hover:text-tech-accent-blue transition-colors">Headsets</Link></li>
+              <li><Link to="/products" className="text-tech-text hover:text-tech-accent-blue transition-colors">Tất cả sản phẩm</Link></li>
+              <li><Link to="/products?category=mouse" className="text-tech-text hover:text-tech-accent-blue transition-colors">Chuột</Link></li>
+              <li><Link to="/products?category=keyboard" className="text-tech-text hover:text-tech-accent-blue transition-colors">Bàn phím</Link></li>
+              <li><Link to="/products?category=headset" className="text-tech-text hover:text-tech-accent-blue transition-colors">Tai nghe</Link></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="font-mono font-bold text-white mb-4">Company</h4>
+            <h4 className="font-mono font-bold text-white mb-4">Công ty</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/about" className="text-tech-text hover:text-tech-accent-blue transition-colors">About Us</Link></li>
-              <li><Link to="/contact" className="text-tech-text hover:text-tech-accent-blue transition-colors">Contact</Link></li>
-              <li><Link to="/careers" className="text-tech-text hover:text-tech-accent-blue transition-colors">Careers</Link></li>
-              <li><Link to="/privacy" className="text-tech-text hover:text-tech-accent-blue transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/about" className="text-tech-text hover:text-tech-accent-blue transition-colors">Giới thiệu</Link></li>
+              <li><Link to="/contact" className="text-tech-text hover:text-tech-accent-blue transition-colors">Liên hệ</Link></li>
+              <li><Link to="/careers" className="text-tech-text hover:text-tech-accent-blue transition-colors">Tuyển dụng</Link></li>
+              <li><Link to="/privacy" className="text-tech-text hover:text-tech-accent-blue transition-colors">Chính sách bảo mật</Link></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="font-mono font-bold text-white mb-4">Connect</h4>
+            <h4 className="font-mono font-bold text-white mb-4">Kết nối</h4>
             <div className="flex space-x-4">
               <a href="#" className="h-10 w-10 rounded-full bg-tech-card flex items-center justify-center hover:bg-tech-accent-blue hover:text-black transition-colors">
                 <span className="font-bold">fb</span>
@@ -59,7 +59,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-tech-border mt-8 pt-6 text-center text-sm text-tech-text">
-          <p>&copy; 2025 TechX. All rights reserved.</p>
+          <p>&copy; 2025 TechX. Bảo lưu mọi quyền.</p>
         </div>
       </div>
     </footer>

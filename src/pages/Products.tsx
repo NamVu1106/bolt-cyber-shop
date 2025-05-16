@@ -61,7 +61,7 @@ const Products = () => {
       
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-mono font-bold text-white mb-8">
-          Browse <span className="text-tech-accent-blue">Products</span>
+          Khám phá <span className="text-tech-accent-blue">Sản phẩm</span>
         </h1>
         
         <div className="flex flex-col lg:flex-row gap-8">
@@ -72,7 +72,7 @@ const Products = () => {
               className="flex items-center space-x-2 bg-tech-card px-4 py-2 rounded-md w-full"
             >
               <Filter className="h-5 w-5" />
-              <span>{showFilters ? 'Hide Filters' : 'Show Filters'}</span>
+              <span>{showFilters ? 'Ẩn Bộ lọc' : 'Hiện Bộ lọc'}</span>
             </button>
           </div>
           
@@ -80,18 +80,18 @@ const Products = () => {
           <div className={`${showFilters ? 'block' : 'hidden'} lg:block lg:w-64 flex-shrink-0`}>
             <div className="bg-tech-card rounded-lg p-6 sticky top-24">
               <div className="flex justify-between items-center mb-6">
-                <h3 className="font-mono font-bold text-white">Filters</h3>
+                <h3 className="font-mono font-bold text-white">Bộ lọc</h3>
                 <button 
                   onClick={clearFilters}
                   className="text-sm text-tech-accent-blue hover:text-tech-accent-orange"
                 >
-                  Clear All
+                  Xóa tất cả
                 </button>
               </div>
               
               {/* Price range filter */}
               <div className="mb-8">
-                <h4 className="font-medium text-white mb-4">Price Range</h4>
+                <h4 className="font-medium text-white mb-4">Khoảng giá</h4>
                 <div className="mb-2 flex justify-between text-sm">
                   <span>${priceRange[0]}</span>
                   <span>${priceRange[1]}</span>
@@ -108,7 +108,7 @@ const Products = () => {
               
               {/* Category filter */}
               <div>
-                <h4 className="font-medium text-white mb-4">Categories</h4>
+                <h4 className="font-medium text-white mb-4">Danh mục</h4>
                 <div className="space-y-2">
                   {categories.map((category) => (
                     <div key={category.slug} className="flex items-center">
@@ -154,7 +154,7 @@ const Products = () => {
             )}
             
             <div className="text-tech-text mb-4">
-              Showing {filteredProducts.length} products
+              Hiển thị {filteredProducts.length} sản phẩm
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -172,8 +172,8 @@ const Products = () => {
             
             {filteredProducts.length === 0 && (
               <div className="text-center py-12">
-                <h3 className="text-xl font-mono font-bold text-white mb-2">No products found</h3>
-                <p className="text-tech-text">Try adjusting your filters to find what you're looking for.</p>
+                <h3 className="text-xl font-mono font-bold text-white mb-2">Không tìm thấy sản phẩm</h3>
+                <p className="text-tech-text">Hãy điều chỉnh bộ lọc để tìm sản phẩm phù hợp.</p>
               </div>
             )}
           </div>

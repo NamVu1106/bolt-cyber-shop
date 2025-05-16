@@ -22,10 +22,10 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-tech-text hover:text-tech-accent-blue transition-colors">
-              Home
+              Trang chủ
             </Link>
             <Link to="/products" className="text-tech-text hover:text-tech-accent-blue transition-colors">
-              Products
+              Sản phẩm
             </Link>
             <div className="relative">
               <Link to="/cart" className="text-tech-text hover:text-tech-accent-blue transition-colors">
@@ -39,7 +39,7 @@ const Navbar = () => {
             </div>
             <Link to="/auth" className="bg-tech-accent-blue text-black px-4 py-2 rounded-md font-mono font-bold hover:bg-opacity-80 transition-colors flex items-center space-x-2">
               <LogIn className="h-4 w-4" />
-              <span>Login</span>
+              <span>Đăng nhập</span>
             </Link>
           </div>
           
@@ -61,14 +61,14 @@ const Navbar = () => {
                 className="text-tech-text hover:text-tech-accent-blue transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Home
+                Trang chủ
               </Link>
               <Link 
                 to="/products" 
                 className="text-tech-text hover:text-tech-accent-blue transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Products
+                Sản phẩm
               </Link>
               <Link 
                 to="/cart" 
@@ -76,7 +76,7 @@ const Navbar = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 <ShoppingCart className="h-5 w-5 mr-2" />
-                <span>Cart ({cartCount})</span>
+                <span>Giỏ hàng ({cartCount})</span>
               </Link>
               <Link 
                 to="/auth" 
@@ -84,7 +84,7 @@ const Navbar = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 <LogIn className="h-4 w-4" />
-                <span>Login</span>
+                <span>Đăng nhập</span>
               </Link>
             </div>
           </div>

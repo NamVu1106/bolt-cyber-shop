@@ -26,16 +26,16 @@ const Index = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-lg">
               <h1 className="text-4xl md:text-5xl font-mono font-bold text-white mb-4">
-                Level Up Your <span className="text-tech-accent-blue">Gaming Setup</span>
+                Nâng cấp <span className="text-tech-accent-blue">Gaming Setup</span> của bạn
               </h1>
               <p className="text-tech-text text-lg mb-8">
-                Premium peripherals designed for gamers, built for performance.
+                Phụ kiện cao cấp dành cho game thủ, được thiết kế cho hiệu suất tối ưu.
               </p>
               <Link 
                 to="/products" 
                 className="bg-tech-accent-blue text-black px-6 py-3 rounded-md font-mono font-bold hover:bg-opacity-90 transition-colors inline-flex items-center space-x-2"
               >
-                <span>Shop Now</span>
+                <span>Mua ngay</span>
                 <ArrowRight className="h-5 w-5" />
               </Link>
             </div>
@@ -47,7 +47,7 @@ const Index = () => {
       <section className="py-16 bg-tech-secondary">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-mono font-bold text-white mb-8 text-center">
-            Browse <span className="text-tech-accent-blue">Categories</span>
+            Khám phá <span className="text-tech-accent-blue">Danh mục</span>
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
             {categories.map((category, index) => (
@@ -67,13 +67,13 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-3xl font-mono font-bold text-white">
-              Featured <span className="text-tech-accent-blue">Products</span>
+              Sản phẩm <span className="text-tech-accent-blue">Nổi bật</span>
             </h2>
             <Link 
               to="/products" 
               className="text-tech-accent-blue hover:text-tech-accent-orange transition-colors flex items-center space-x-2"
             >
-              <span>View All</span>
+              <span>Xem tất cả</span>
               <ArrowRight className="h-5 w-5" />
             </Link>
           </div>
@@ -104,16 +104,16 @@ const Index = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent flex items-center">
               <div className="px-8 md:px-12 max-w-lg">
                 <h3 className="text-2xl md:text-3xl font-mono font-bold text-white mb-2">
-                  Premium Audio Experience
+                  Trải nghiệm Âm thanh Cao cấp
                 </h3>
                 <p className="text-tech-text mb-6">
-                  Immersive sound with crystal clear communication for competitive gaming.
+                  Âm thanh sống động với khả năng giao tiếp trong game rõ ràng, dành cho gaming chuyên nghiệp.
                 </p>
                 <Link 
                   to="/products?category=headset" 
                   className="bg-tech-accent-orange text-black px-6 py-2 rounded-md font-mono font-bold hover:bg-opacity-90 transition-colors inline-flex items-center space-x-2"
                 >
-                  <span>Shop Headsets</span>
+                  <span>Mua Tai nghe</span>
                   <ArrowRight className="h-5 w-5" />
                 </Link>
               </div>
@@ -126,7 +126,7 @@ const Index = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-mono font-bold text-white mb-8">
-            Best <span className="text-tech-accent-orange">Sellers</span>
+            Sản phẩm <span className="text-tech-accent-orange">Bán chạy</span>
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {products.slice(0, 4).map((product) => (
@@ -147,19 +147,19 @@ const Index = () => {
       <section className="py-16 bg-tech-card border-y border-tech-border">
         <div className="container mx-auto px-4 text-center max-w-xl">
           <h2 className="text-3xl font-mono font-bold text-white mb-4">
-            Join Our <span className="text-tech-accent-blue">Newsletter</span>
+            Đăng ký <span className="text-tech-accent-blue">Bản tin</span>
           </h2>
           <p className="text-tech-text mb-8">
-            Subscribe to receive updates on new products, special offers, and tech tips.
+            Đăng ký để nhận thông tin về sản phẩm mới, khuyến mãi đặc biệt và các mẹo công nghệ.
           </p>
           <div className="flex flex-col sm:flex-row gap-2">
             <input 
               type="email" 
-              placeholder="Enter your email" 
+              placeholder="Nhập email của bạn" 
               className="tech-input flex-1"
             />
             <button className="tech-button">
-              Subscribe
+              Đăng ký
             </button>
           </div>
         </div>

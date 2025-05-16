@@ -41,7 +41,7 @@ const ProductDetail = () => {
       <div className="min-h-screen flex flex-col">
         <Navbar />
         <div className="flex-1 flex items-center justify-center">
-          <div className="animate-pulse">Loading...</div>
+          <div className="animate-pulse">Đang tải...</div>
         </div>
         <Footer />
       </div>
@@ -53,11 +53,11 @@ const ProductDetail = () => {
       <div className="min-h-screen flex flex-col">
         <Navbar />
         <div className="flex-1 container mx-auto px-4 py-16 text-center">
-          <h1 className="text-3xl font-mono font-bold text-white mb-4">Product Not Found</h1>
-          <p className="text-tech-text mb-8">The product you're looking for doesn't exist or has been removed.</p>
+          <h1 className="text-3xl font-mono font-bold text-white mb-4">Không tìm thấy sản phẩm</h1>
+          <p className="text-tech-text mb-8">Sản phẩm bạn đang tìm kiếm không tồn tại hoặc đã bị xóa.</p>
           <Link to="/products" className="tech-button inline-flex items-center">
             <ArrowLeft className="mr-2 h-5 w-5" />
-            Back to Products
+            Quay lại Sản phẩm
           </Link>
         </div>
         <Footer />
@@ -72,9 +72,9 @@ const ProductDetail = () => {
       <div className="container mx-auto px-4 py-8">
         {/* Breadcrumb */}
         <div className="flex items-center text-sm text-tech-text mb-8">
-          <Link to="/" className="hover:text-tech-accent-blue transition-colors">Home</Link>
+          <Link to="/" className="hover:text-tech-accent-blue transition-colors">Trang chủ</Link>
           <span className="mx-2">/</span>
-          <Link to="/products" className="hover:text-tech-accent-blue transition-colors">Products</Link>
+          <Link to="/products" className="hover:text-tech-accent-blue transition-colors">Sản phẩm</Link>
           <span className="mx-2">/</span>
           <span className="text-white">{product.name}</span>
         </div>
@@ -101,7 +101,7 @@ const ProductDetail = () => {
                 >
                   <img 
                     src={image} 
-                    alt={`${product.name} - view ${index + 1}`}
+                    alt={`${product.name} - xem ${index + 1}`}
                     className="w-full h-20 object-cover"
                   />
                 </div>
@@ -122,12 +122,12 @@ const ProductDetail = () => {
                 {product.inStock ? (
                   <div className="flex items-center text-green-500">
                     <Check className="h-5 w-5 mr-2" />
-                    <span>In Stock</span>
+                    <span>Còn hàng</span>
                   </div>
                 ) : (
                   <div className="flex items-center text-red-500">
                     <X className="h-5 w-5 mr-2" />
-                    <span>Out of Stock</span>
+                    <span>Hết hàng</span>
                   </div>
                 )}
               </div>
@@ -140,7 +140,7 @@ const ProductDetail = () => {
               {product.inStock && (
                 <>
                   <div className="mb-6">
-                    <label className="block text-tech-text mb-2">Quantity</label>
+                    <label className="block text-tech-text mb-2">Số lượng</label>
                     <div className="flex items-center">
                       <button
                         onClick={() => handleQuantityChange(-1)}
@@ -166,26 +166,26 @@ const ProductDetail = () => {
                   
                   <button className="tech-button w-full flex items-center justify-center space-x-2 py-4">
                     <ShoppingCart className="h-5 w-5" />
-                    <span>Add to Cart</span>
+                    <span>Thêm vào giỏ hàng</span>
                   </button>
                 </>
               )}
               
               {!product.inStock && (
                 <button disabled className="bg-gray-600 text-gray-300 w-full py-4 rounded-md font-mono font-bold cursor-not-allowed">
-                  Out of Stock
+                  Hết hàng
                 </button>
               )}
             </div>
             
             {/* Additional details */}
             <div className="mt-8">
-              <h3 className="font-mono font-bold text-white mb-4">More Information</h3>
+              <h3 className="font-mono font-bold text-white mb-4">Thông tin thêm</h3>
               
               <div className="bg-tech-card rounded-lg border border-tech-border overflow-hidden">
                 <div className="flex border-b border-tech-border">
                   <div className="w-1/3 p-4 border-r border-tech-border bg-tech-secondary">
-                    <span className="text-tech-text">Category</span>
+                    <span className="text-tech-text">Danh mục</span>
                   </div>
                   <div className="w-2/3 p-4">
                     <span className="capitalize">{product.category}</span>
@@ -193,7 +193,7 @@ const ProductDetail = () => {
                 </div>
                 <div className="flex border-b border-tech-border">
                   <div className="w-1/3 p-4 border-r border-tech-border bg-tech-secondary">
-                    <span className="text-tech-text">SKU</span>
+                    <span className="text-tech-text">Mã SP</span>
                   </div>
                   <div className="w-2/3 p-4">
                     <span>TX-{product.id}-{product.category.substring(0, 3).toUpperCase()}</span>
@@ -201,10 +201,10 @@ const ProductDetail = () => {
                 </div>
                 <div className="flex">
                   <div className="w-1/3 p-4 border-r border-tech-border bg-tech-secondary">
-                    <span className="text-tech-text">Warranty</span>
+                    <span className="text-tech-text">Bảo hành</span>
                   </div>
                   <div className="w-2/3 p-4">
-                    <span>2 Years Limited</span>
+                    <span>2 năm</span>
                   </div>
                 </div>
               </div>
@@ -215,7 +215,7 @@ const ProductDetail = () => {
         {/* Related Products */}
         <div className="mt-16">
           <h2 className="text-2xl font-mono font-bold text-white mb-6">
-            Related <span className="text-tech-accent-blue">Products</span>
+            Sản phẩm <span className="text-tech-accent-blue">Liên quan</span>
           </h2>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">

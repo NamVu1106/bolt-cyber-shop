@@ -12,6 +12,16 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ id, name, price, image, category }: ProductCardProps) => {
+  // Format price to VND
+  const formatPrice = (price: number) => {
+    return new Intl.NumberFormat('vi-VN', {
+      style: 'currency',
+      currency: 'VND',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0
+    }).format(price * 23000); // Converting USD to VND approximately
+  };
+
   return (
     <div className="product-card group">
       <Link to={`/product/${id}`}>
@@ -31,7 +41,7 @@ const ProductCard = ({ id, name, price, image, category }: ProductCardProps) => 
           <h3 className="text-white font-mono font-bold mb-2 group-hover:text-tech-accent-blue transition-colors">{name}</h3>
         </Link>
         <div className="flex justify-between items-center">
-          <p className="text-tech-accent-orange font-bold">${price.toFixed(2)}</p>
+          <p className="text-tech-accent-orange font-bold">{formatPrice(price)}</p>
           <button className="bg-tech-secondary p-2 rounded-full hover:bg-tech-accent-blue hover:text-black transition-colors">
             <ShoppingCart className="h-5 w-5" />
           </button>

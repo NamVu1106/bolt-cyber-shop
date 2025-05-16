@@ -26,6 +26,16 @@ const ProductDetail = () => {
     }, 500);
   }, [id]);
   
+  // Format price to VND
+  const formatPrice = (price: number) => {
+    return new Intl.NumberFormat('vi-VN', {
+      style: 'currency',
+      currency: 'VND',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0
+    }).format(price * 23000); // Converting USD to VND approximately
+  };
+  
   const handleQuantityChange = (value: number) => {
     if (quantity + value > 0) {
       setQuantity(quantity + value);
@@ -115,7 +125,7 @@ const ProductDetail = () => {
               <h1 className="text-3xl font-mono font-bold text-white mb-2">{product.name}</h1>
               
               <div className="flex items-center mb-4">
-                <span className="text-2xl text-tech-accent-orange font-bold">${product.price.toFixed(2)}</span>
+                <span className="text-2xl text-tech-accent-orange font-bold">{formatPrice(product.price)}</span>
               </div>
               
               <div className="flex items-center mb-6">
@@ -236,7 +246,7 @@ const ProductDetail = () => {
                       <h3 className="text-white font-mono font-bold mb-2 group-hover:text-tech-accent-blue transition-colors">
                         {relatedProduct.name}
                       </h3>
-                      <p className="text-tech-accent-orange font-bold">${relatedProduct.price.toFixed(2)}</p>
+                      <p className="text-tech-accent-orange font-bold">{formatPrice(relatedProduct.price)}</p>
                     </div>
                   </div>
                 </Link>
